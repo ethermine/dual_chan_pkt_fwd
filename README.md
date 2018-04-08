@@ -3,7 +3,7 @@ Single Channel LoRaWAN Gateway (Up and Downlink)
 This repository contains a proof-of-concept implementation of a dual
 channel LoRaWAN gateway.
 
-It has been tested on the Raspberry Pi platform, using a Semtech SX1276 (2x HopeRF RFM95W uputronics hat).
+It has been tested on the Raspberry Pi platform, using a Semtech SX1276/78 (2x HopeRF RFM95W uputronics hat).
 (other configurations and the SX1272 not tested, but should be able to make working)
 
 The code is for testing and development purposes only, and is not meant
