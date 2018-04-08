@@ -95,15 +95,6 @@ Defaults:
 
 Please configure the global_conf.json file with your settigns like network interface, location, email and description.
 
-
-Pictures
---------
-
-running daemon on Raspberry PI with uputronics Raspberry Pi+ LoRa(TM) Expansion Board    
-
-<img src="https://github.com/bokse001/dual_chan_pkt_fwd/blob/master/images/dual-channel-gw-ttn.jpg" alt="Dual Channel GW TTN">
-
-
 **Original README.md below**
 
 Features
