@@ -12,34 +12,13 @@ for production usage.
 Part of the source has been copied from the Semtech Packet Forwarder
 (with permission).
 
-Was forked from @bokse001 https://github.com/bokse001/dual_chan_pkt_fwd to add dual channel support, 
-    configurable network interface, Downlink and uputronics Raspberry Pi+ LoRa(TM) Expansion Board
+Was forked from @bokse001 https://github.com/bokse001/dual_chan_pkt_fwd to create a POC of implementing a single channel up and down to Dragino Raspberry LoRa Hat v1.4.
 
 It contains code from both the ESP-1ch-Gateway-v3.0 by Maarten Westenberg https://github.com/things4u/ESP-1ch-Gateway-v3.0
 and TheThingsNetwork/packet_forwarder https://github.com/TheThingsNetwork/packet_forwarder
 
 [WARNING] This is bleeding edge development so do not expect clean coding, but it has been working for a while now. Lots of things
 still to do.
-
-Also have a look at my blog where i write my experiences on TTN, LoRa and domoticz from time to time: https://hansboksem.wordpress.com/
-
-Added new Features
-------------------
-
-- pin definition are in config file
-- Removed some configuration hard coded in source file and put them into global_conf.json
-- renamed main.cpp to dual_chan_pkt_fwd.cpp
-- added dual_chan_pkt_fwd.service for systemd (debian jessie minimal) start
-- added `make install` and `make uninstall` into Makefile to install service
-
-Added by HBM:
-- added support for uputronics Raspberry Pi+ LoRa(TM) Expansion Board
-- added control for On board Led's if any (uputronics board CE0 and CE1 activity, Internet and Lan sensing leds)
-- added configuration of the network interface (eth0/wlan0) and sensing network interface connectivity
-- added a counter for packets received and sent since last start
-- added Downlink support in a separate thread
-- moved LoRA functions to separate file
-- moved compile time variables to header file
 
 Raspberry PI pin mapping is as follow and pin number in file `global_conf.json` are WiringPi pin number (wPi colunm)
 
@@ -112,7 +91,7 @@ Configuration
 Defaults:
 
 - LoRa:   SF7 at 868.1 Mhz and 868.3 Mhz
-- Server: 40.114.249.243, port 1700  (The Things Network)
+- Server: loraserver.local, port 1700  (loraserver.io Local Server)
 
 Please configure the global_conf.json file with your settigns like network interface, location, email and description.
 
