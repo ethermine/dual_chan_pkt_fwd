@@ -1,4 +1,4 @@
-Dual Channel LoRaWAN Gateway (Up and Downlink)
+Single Channel LoRaWAN Gateway (Up and Downlink)
 ==============================
 This repository contains a proof-of-concept implementation of a dual
 channel LoRaWAN gateway.
@@ -12,11 +12,7 @@ for production usage.
 Part of the source has been copied from the Semtech Packet Forwarder
 (with permission).
 
-Maintainer: Thomas Telkamp <thomas@telkamp.eu>
-
-Was forked by @jlesech https://github.com/tftelkamp/single_chan_pkt_fwd to add json configuration file    
-then forked by @hallard https://github.com/hallard/single_chan_pkt_fwd 
-then forked by @bokse001 https://github.com/bokse001/dual_chan_pkt_fwd to add dual channel support, 
+Was forked from @bokse001 https://github.com/bokse001/dual_chan_pkt_fwd to add dual channel support, 
     configurable network interface, Downlink and uputronics Raspberry Pi+ LoRa(TM) Expansion Board
 
 It contains code from both the ESP-1ch-Gateway-v3.0 by Maarten Westenberg https://github.com/things4u/ESP-1ch-Gateway-v3.0
@@ -85,33 +81,6 @@ pins configuration in `global_conf.json`
   "pin_dio0": 7,
   "pin_rst": 0
 ```
-
-* For [LoRasPi][1] Shield    
-pins configuration in file `global_conf.json`
-
-```
-  "pin_nss": 8,
-  "pin_dio0": 6,
-  "pin_rst": 3,
-  "pin_led1":4
-```
-
-* For Uputronics Raspberry Pi+ LoRa(TM) Expansion Board
-pins configuration in file `global_conf.json`
-
-```
-  "pin_nss": 10,
-  "pin_dio0": 6,
-  "pin_nss2": 11,
-  "pin_dio0_2": 27,
-  "pin_rst": 0,
-  "pin_NetworkLED": 22,
-  "pin_InternetLED": 23,
-  "pin_ActivityLED_0": 21,
-  "pin_ActivityLED_1": 29,
-```
-
-
 Installation
 ------------
 
@@ -119,22 +88,22 @@ Install dependencies as indicated in original README.md below then
 
 ```shell
 cd /home/pi
-git clone -b dual_chan_pkt_fwd_up_down https://github.com/bokse001/dual_chan_pkt_fwd
-cd dual_chan_pkt_fwd
+git clone -b single_chan_pkt_fwd https://github.com/ethermine/dual_chan_pkt_fwd
+cd single_chan_pkt_fwd
 make
 sudo make install
 ````
 
 To start service, as root or sudo (should already be started at boot if you done make install and rebooted of course), stop service or look service status
 ```shell
-systemctl start dual_chan_pkt_fwd
-systemctl stop dual_chan_pkt_fwd
-systemctl status dual_chan_pkt_fwd
+systemctl start single_chan_pkt_fwd
+systemctl stop single_chan_pkt_fwd
+systemctl status single_chan_pkt_fwd
 ````
 
 To see gateway log in real time
 ```shell
-sudo journalctl -f -u dual_chan_pkt_fwd
+sudo journalctl -f -u single_chan_pkt_fwd
 ````
 
 Configuration
