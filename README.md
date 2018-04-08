@@ -88,7 +88,7 @@ Install dependencies as indicated in original README.md below then
 
 ```shell
 cd /home/pi
-git clone -b single_chan_pkt_fwd https://github.com/ethermine/dual_chan_pkt_fwd
+git clone -b single_chan_pkt_fwd https://github.com/ethermine/dual_chan_pkt_fwd single_chan_pkt_fwd
 cd single_chan_pkt_fwd
 make
 sudo make install
